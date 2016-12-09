@@ -1,0 +1,23 @@
+<ion-view view-title="FITNESS GYMS">
+<ion-content lazy-scroll>
+<label class="item item-input">
+	<i class="icon ion-search placeholder-icon"></i>
+	<input type="text" placeholder="Enter Zip Code to find a Fitness Gym">
+</label>
+<ion-item ng-repeat="fitness in fitnessResults">
+ <center>
+    <h2>{{fitness.name}}</h2>
+    <p>{{fitness.location.city}},{{fitness.location.state}}</p>
+    <h3>{{fitness.url}}</h3>
+    <p>{{fitness.contact.formmattedPhone}}</p>
+    </center>
+</ion-item>
+</ion-content>
+
+
+
+
+
+
+
+

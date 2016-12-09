@@ -1,0 +1,19 @@
+<ion-view view-title="WRESTLING">
+<ion-content lazy-scroll>
+<form class="navbar-form navbar-left" role="search">
+ <label class="item item-input">
+    <i class="icon ion-search placeholder-icon"></i>
+    <input type="text" placeholder="Search" ng-model="wrestling.query">
+  </label>
+  </form>
+  <ion-item ng-repeat="wrestling in wrestlingResults | filter: wrestling.query">
+  <center>
+    <h2>{{wrestling.name}}</h2>
+    <p>{{wrestling.location.city}},{{wrestling.location.state}}</p>
+    <h3>{{wrestling.url}}</h3>
+    <p>{{wrestling.contact.formmattedPhone}}</p>
+    </center>
+ </ion-item>
+</ion-content>
+
+

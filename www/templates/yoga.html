@@ -1,0 +1,23 @@
+<ion-view view-title="YOGA">
+<ion-content lazy-scroll>
+<form class="navbar-form navbar-left" role="search">
+ <label class="item item-input">
+    <i class="icon ion-search placeholder-icon"></i>
+    <input type="text" placeholder="Search" ng-model="yoga.query">
+  </label>
+  </form>
+  <ion-item ng-repeat="yoga in yogaResults | filter: yoga.query">
+  <center>
+    <h2>{{yoga.name}}</h2>
+    <p>{{yoga.location.city}},{{yoga.location.state}}</p>
+    <h3>{{yoga.url}}</h3>
+    <p>{{yoga.contact.formmattedPhone}}</p>
+    </center>
+ </ion-item>
+</ion-content>
+
+
+
+
+
+

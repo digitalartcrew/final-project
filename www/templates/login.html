@@ -1,0 +1,32 @@
+<ion-modal-view>
+  <ion-header-bar>
+    <h1 class="title">Login</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closeLogin()">Close</button>
+    </div>
+  </ion-header-bar>
+  <ion-content>
+    <form ng-submit="loginEmail(user)">
+      <div class="list">
+       <label class="item item-input">
+          <span class="input-label">Username</span>
+          <input type="text" ng-model="user.email">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Password</span>
+          <input type="password" ng-model="user.password">
+        </label>
+        <label class="item">
+          <button class="button button-block button-assertive" type="submit">Submit</button>
+        </label>
+      </div>
+    </form>
+      <!--   <label class="item">
+          <button class="button button-block button-assertive" ng-click="loginFacebook()">Facebook Login</button>
+        </label> -->
+           <label class="item">
+          <button ng-click="goSignUp()" class="button button-block button-assertive">Click Here to Sign Up!</button>
+         
+        </label>
+  </ion-content>
+</ion-modal-view>

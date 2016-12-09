@@ -1,0 +1,20 @@
+  <ion-view view-title="BJJ">
+<ion-content lazy-scroll>
+ <form class="navbar-form navbar-left" role="search">
+<label class="item item-input">
+  <i class="icon ion-search placeholder-icon"></i>
+  <input type="text" placeholder="Search" ng-model="bjj.query">
+</label>
+</form>
+<ion-item ng-repeat="bjj in bjjResults | filter: bjj.query">
+  <center>
+    <h2>{{bjj.name}}</h2>
+    <p>{{bjj.location.city}},{{bjj.location.state}}</p>
+    <h3>{{bjj.url}}</h3>
+    <p>{{bjj.contact.formmattedPhone}}</p>
+    </center>
+ </ion-item>
+</ion-content>
+
+
+

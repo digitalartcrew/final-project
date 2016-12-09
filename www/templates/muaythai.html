@@ -1,0 +1,21 @@
+<ion-view view-title="MUAY THAI">
+<ion-content lazy-scroll>
+ <form class="navbar-form navbar-left" role="search">
+<label class="item item-input">
+	<i class="icon ion-search placeholder-icon"></i>
+	<input type="text" placeholder="Search" ng-model="muaythai.query">
+</label>
+</form>
+<ion-item ng-repeat="muaythai in muaythaiResults | filter: muaythai.query">
+<center>
+	<h2>{{muaythai.name}}</h2>
+	<p>{{muaythai.location.city}},{{muaythai.location.state}}</p>
+	<h3>{{muaythai.url}}</h3>
+	<p>{{muaythai.contact.formmattedPhone}}</p>
+</center>
+</ion-item>
+</ion-content>
+
+
+
+
